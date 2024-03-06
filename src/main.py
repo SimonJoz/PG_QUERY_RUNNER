@@ -39,15 +39,7 @@ TABLES = [
     "schema2.table1"
 ]
 
-QUERY_TEMPLATE = "ANALYZE VERBOSE {table}"
-
-def execute():
-    queries: List[str] = []
-
-    for table in TABLES:
-        queries.append(f"{QUERY_TEMPLATE}", )
-
-    parallel_queries(queries)
+QUERY_TEMPLATE = "VACUUM FULL ANALYZE {table}"
 
 def main():
     logger.info("Query executor has been started.")
