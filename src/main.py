@@ -31,7 +31,7 @@ database_name = "my_database_name"
 database_password = "my_database_password"
 
 # Connection pool
-CONNECTION_NUMBER = 16
+CONNECTION_NUMBER = 2
 
 TABLES = [
     "schema1.table1",
@@ -40,6 +40,7 @@ TABLES = [
 ]
 
 QUERY_TEMPLATE = "VACUUM FULL ANALYZE {table}"
+
 
 def main():
     logger.info("Query executor has been started.")
